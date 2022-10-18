@@ -36,12 +36,6 @@ steps:
     patchVersion: '0'
  
 - task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
-    vstsFeed: 'c79cabf8-69ec-447a-9d43-9963de96fd03/29819d4e-ea6c-4a11-8fce-0a1642969429'
-- task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
     command: push
